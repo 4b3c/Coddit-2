@@ -11,10 +11,13 @@ def store(author, created_time, contribution_type):
 
 		if (author in data):
 			data[author][contribution_type] += 1
+			data[author][2].append(created_time)
 
 		elif (author not in data):
-			data[author] = [0, 0]
+			data[author] = [0, 0, []]
 			data[author][contribution_type] += 1
+			data[author][2].append(created_time)
+
 
 
 	with open("data.json", "w") as data_file:
