@@ -114,4 +114,4 @@ dmypy.json
 .pyre/
 
 # Login File
-login_info.py
+Coddit-2/login_info.py
