@@ -24,16 +24,3 @@ with open("data.json") as data_file:
 		list_of_users.append([user, data.get(user)[0], data.get(user)[1]])
 
 	list_of_users.sort(key = get_by_comments, reverse = True)
-
-edit_string = "User: ----------------------------- Posts: ----- Comments: \r\r"
-other_space_length = " -------- "
-for i in list_of_users:
-	space_length = "  "
-	for j in range(34 - len(str(i[0]))):
-		space_length += "-"
-	space_length += "  "
-	edit_string += ""
-	edit_string += str(i[0])
-	edit_string += str(space_length) + str(i[1])
-	edit_string += str(other_space_length) + str(i[2]) + "\r\r"
-post.edit(edit_string)
