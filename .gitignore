@@ -114,4 +114,4 @@ dmypy.json
 .pyre/
 
 # Login File
-login_info.py
+login_info.py/
